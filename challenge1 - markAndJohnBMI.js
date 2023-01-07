@@ -25,21 +25,12 @@ let johnMass = 85;
 let johnHeight = 1.76;
 
 markMass = 78;
-markHeight= 1.69;
+markHeight = 1.69;
 
 johnMass = 92;
-johnHeight= 1.76;
+johnHeight = 1.95;
 
-const markBMI = markMass / (markHeight ** 2);
-const johnBMI = johnMass / (johnHeight ** 2);
+const markBMI = markMass / markHeight ** 2;
+const johnBMI = johnMass / (johnHeight * johnHeight);
 
-// function calculateBMI (mass, height){
-//   const BMI = mass / (height ** 2);
-
-//   console.log(BMI);
-// }
-
-// calculateBMI(markMass, markHeight);
-// calculateBMI(johnMass, johnHeight);
-
-console.log(markBMI, johnBMI)
+console.log(markBMI, johnBMI, markBMI > johnBMI);

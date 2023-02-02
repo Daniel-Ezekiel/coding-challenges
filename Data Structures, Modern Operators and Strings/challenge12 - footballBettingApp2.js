@@ -80,7 +80,9 @@ console.log(average);
 // TASK 3
 const teamOdds = Object.entries(game.odds);
 for (const [team, odd] of teamOdds)
-  console.log(`Odd of victory ${game[team] ?? 'draw'}: ${odd}.`);
+  console.log(
+    `Odd of ${game[team] ? `victory ${game[team]}` : 'draw'}: ${odd}.`
+  );
 
 // BONUS
 const scorers = {};

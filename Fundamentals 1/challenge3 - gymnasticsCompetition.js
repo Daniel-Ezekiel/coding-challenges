@@ -1,3 +1,5 @@
+'use strict';
+
 /*
     There are two gymnastics teams, Dolphins and Koalas. They compete against each other 3 times. The winner with the highest average score wins a trophy!
 
@@ -39,9 +41,9 @@ const koalaAverage = (koalaScore1 + koalaScore2 + koalaScore3) / 3;
 
 // BONUS 1 and 2 requirement
 if (dolphinAverage > koalaAverage && dolphinAverage >= 100) {
-  console.log("The Dolphins are the winners!");
+  console.log('The Dolphins are the winners!');
 } else if (dolphinAverage < koalaAverage && koalaAverage >= 100) {
-  console.log("The Koalas are the winners!");
+  console.log('The Koalas are the winners!');
 } else if (
   dolphinAverage === koalaAverage &&
   dolphinAverage >= 100 &&
@@ -49,5 +51,5 @@ if (dolphinAverage > koalaAverage && dolphinAverage >= 100) {
 ) {
   console.log("It's a TIEEEEEE!");
 } else {
-  console.log("No team wins the trophy!");
+  console.log('No team wins the trophy!');
 }

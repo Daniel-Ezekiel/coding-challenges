@@ -1,3 +1,5 @@
+'use strict';
+
 /*
 Given an array of forecasted maximum temperatures, the thermometer displays a string with these temperatures.
 
@@ -26,7 +28,7 @@ TEST DATA 2: [12, 5, -5, 0, 4]
 */
 
 const printForecast = function (arr) {
-  let str = "... ";
+  let str = '... ';
 
   for (let i = 0; i < arr.length; i++) {
     str += `${arr[i]}ºC in ${i + 1} days ... `;

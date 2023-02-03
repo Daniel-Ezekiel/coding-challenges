@@ -1,3 +1,5 @@
+'use strict';
+
 /*
     Steven is still building his tip calculator, using the same rules as before: Tip 15% of the bill if the bill value is between 50 and 300, and if the value is different, the tip is 20%.
 
@@ -13,7 +15,7 @@
     GOOD LUCK 😀
 */
 
-const calcTip = (billValue) =>
+const calcTip = billValue =>
   billValue >= 50 && billValue <= 300 ? billValue * 0.15 : billValue * 0.2;
 
 const tip = calcTip(100);

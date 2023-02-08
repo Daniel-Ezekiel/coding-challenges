@@ -47,7 +47,10 @@ const poll = {
       )
     );
 
-    if (choice < this.options.length) this.answers[choice]++;
+    typeof choice === 'number' &&
+      choice < this.options.length &&
+      this.answers[choice]++;
+
     this.displayResults();
     this.displayResults('string');
     // console.log(this.answers);
@@ -56,7 +59,7 @@ const poll = {
   displayResults(type = 'array') {
     if (type === 'array') {
       console.log(this.answers);
-    } else {
+    } else if (type === 'string') {
       console.log(`Poll results are ${this.answers.join(', ')}`);
     }
   },
@@ -68,5 +71,5 @@ document
 
 const data1 = [5, 2, 3];
 const data2 = [1, 5, 3, 9, 6, 1];
-poll.displayResults.call({ answers: data1 }, typeof data1);
-poll.displayResults.call({ answers: data2 });
+poll.displayResults.call({ answers: data1 });
+poll.displayResults.call({ answers: data2 }, 'string');

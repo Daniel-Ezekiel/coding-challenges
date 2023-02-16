@@ -79,22 +79,13 @@ console.log(`${ownersEatTooMuch.join(' and ')}'s dogs eat too much!`);
 console.log(dogs.some(dog => dog.curFood === dog.recFood));
 
 // 6.
-console.log(
-  dogs.some(
-    dog =>
-      dog.curFood <= upperLim(dog.recFood) &&
-      dog.curFood >= lowerLim(dog.recFood)
-  )
-);
+const checkEatingOkay = dog =>
+  dog.curFood <= upperLim(dog.recFood) && dog.curFood >= lowerLim(dog.recFood);
+
+console.log(dogs.some(checkEatingOkay));
 
 // 7.
-console.log(
-  dogs.filter(
-    dog =>
-      dog.curFood <= upperLim(dog.recFood) &&
-      dog.curFood >= lowerLim(dog.recFood)
-  )
-);
+console.log(dogs.filter(checkEatingOkay));
 
 // 8.
 const dogsCopy = dogs.slice();

@@ -1,4 +1,4 @@
-# coding-challenges
+# Coding Challenges from JavaScript - Zero to Mastery Course
 
 This repository currently contains all the solved challenges from Jonas Schmedtmann's JavaScript - Zero to Mastery Course.
 

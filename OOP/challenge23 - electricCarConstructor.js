@@ -21,6 +21,16 @@ const Car = function (make, currentSpeed) {
 
 Car.prototype.accelerate = function () {
   this.currentSpeed += 20;
+  console.log(
+    `${this.make} is going at ${this.currentSpeed}, with a charge of ${this.charge}%.`
+  );
+};
+
+Car.prototype.brake = function () {
+  this.currentSpeed -= 5;
+  console.log(
+    `${this.make} is going at ${this.currentSpeed}, with a charge of ${this.charge}%.`
+  );
 };
 
 const EV = function (make, currentSpeed, charge) {
@@ -37,7 +47,6 @@ EV.prototype.chargeBattery = function (chargeTo) {
   // return this.charge;
 };
 EV.prototype.accelerate = function () {
-  // Car.prototype.accelerate();
   this.charge -= 1;
   console.log(
     `${this.make} is going at ${this.currentSpeed}, with a charge of ${this.charge}%.`
@@ -47,4 +56,4 @@ EV.prototype.accelerate = function () {
 const tesla = new EV('Tesla', 120, 23);
 tesla.chargeBattery(90);
 tesla.accelerate();
-tesla.accelerate();
+tesla.brake();
